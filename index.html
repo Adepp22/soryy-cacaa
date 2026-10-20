@@ -1,0 +1,2168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday ❤️</title>
+
+
+<style>
+
+/* =====================================================
+   GOOGLE FONTS
+===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+
+    color: white;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #46132f,
+            #1b0915 45%,
+            #080408
+        );
+
+}
+
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+#musicButton {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 55px;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff3f91,
+            #b71963
+        );
+
+    color: white;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    z-index: 99999;
+
+    box-shadow:
+        0 0 15px
+        rgba(255,55,145,0.6),
+
+        0 0 35px
+        rgba(255,55,145,0.3);
+
+    transition: 0.3s ease;
+
+}
+
+
+#musicButton:hover {
+
+    transform:
+        scale(1.1)
+        rotate(8deg);
+
+    box-shadow:
+        0 0 25px
+        rgba(255,55,145,0.9);
+
+}
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+.hearts {
+
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 1;
+
+}
+
+
+.heart {
+
+    position: absolute;
+
+    bottom: -50px;
+
+    animation:
+        floatingHeart linear forwards;
+
+    opacity: 0.8;
+
+}
+
+
+@keyframes floatingHeart {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg)
+            scale(0.6);
+
+        opacity: 0;
+
+    }
+
+
+    15% {
+
+        opacity: 0.8;
+
+    }
+
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg)
+            scale(1.3);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =====================================================
+   MAIN PAGE
+===================================================== */
+
+.main-page {
+
+    position: relative;
+
+    z-index: 2;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px 15px;
+
+}
+
+
+.card {
+
+    width:
+        min(850px, 95%);
+
+    padding:
+        55px 45px;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.15);
+
+    border-radius: 30px;
+
+    backdrop-filter:
+        blur(15px);
+
+    -webkit-backdrop-filter:
+        blur(15px);
+
+    box-shadow:
+
+        0 0 40px
+        rgba(255,0,100,0.15),
+
+        inset 0 0 30px
+        rgba(255,255,255,0.03);
+
+    animation:
+        cardAppear 1.3s ease;
+
+}
+
+
+@keyframes cardAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(50px)
+            scale(0.9);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+    }
+
+}
+
+
+/* =====================================================
+   TITLE
+===================================================== */
+
+.small-title {
+
+    color:
+        #ff8fbd;
+
+    font-size:
+        13px;
+
+    letter-spacing:
+        4px;
+
+    text-transform:
+        uppercase;
+
+    margin-bottom:
+        15px;
+
+}
+
+
+h1 {
+
+    font-family:
+        'Dancing Script',
+        cursive;
+
+    font-size:
+        clamp(50px, 10vw, 90px);
+
+    margin-bottom:
+        15px;
+
+    text-shadow:
+
+        0 0 10px
+        #ff4f9a,
+
+        0 0 30px
+        rgba(255,50,130,0.7);
+
+}
+
+
+.subtitle {
+
+    color:
+        #f6bfd4;
+
+    font-size:
+        16px;
+
+    margin-bottom:
+        35px;
+
+}
+
+
+/* =====================================================
+   TYPING AREA
+===================================================== */
+
+.letter {
+
+    max-width:
+        720px;
+
+    margin:
+        auto;
+
+    text-align:
+        left;
+
+    line-height:
+        2;
+
+    color:
+        #f7e5ed;
+
+    font-size:
+        15px;
+
+}
+
+
+.typing-line {
+
+    margin-bottom:
+        20px;
+
+    min-height:
+        30px;
+
+}
+
+
+.cursor {
+
+    display:
+        inline-block;
+
+    width:
+        2px;
+
+    height:
+        18px;
+
+    background:
+        #ff83b7;
+
+    margin-left:
+        4px;
+
+    vertical-align:
+        middle;
+
+    animation:
+        blink 0.7s infinite;
+
+}
+
+
+@keyframes blink {
+
+    0%,
+    50% {
+
+        opacity:
+            1;
+
+    }
+
+
+    51%,
+    100% {
+
+        opacity:
+            0;
+
+    }
+
+}
+
+
+.highlight {
+
+    color:
+        #ff83b7;
+
+    font-weight:
+        600;
+
+}
+
+
+.signature {
+
+    margin-top:
+        30px;
+
+    text-align:
+        right;
+
+    font-family:
+        'Dancing Script',
+        cursive;
+
+    font-size:
+        32px;
+
+    color:
+        #ff9ac4;
+
+    opacity:
+        0;
+
+    transition:
+        1s ease;
+
+}
+
+
+.signature.show {
+
+    opacity:
+        1;
+
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.button-container {
+
+    margin-top:
+        40px;
+
+    opacity:
+        0;
+
+    transform:
+        translateY(20px);
+
+    transition:
+        1s ease;
+
+}
+
+
+.button-container.show {
+
+    opacity:
+        1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+.love-button {
+
+    border:
+        none;
+
+    padding:
+        16px 32px;
+
+    border-radius:
+        50px;
+
+    cursor:
+        pointer;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+
+    color:
+        white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff3f91,
+            #b71963
+        );
+
+    box-shadow:
+
+        0 0 15px
+        rgba(255,55,145,0.6),
+
+        0 0 40px
+        rgba(255,55,145,0.25);
+
+    transition:
+        0.3s ease;
+
+}
+
+
+.love-button:hover {
+
+    transform:
+        translateY(-5px)
+        scale(1.04);
+
+    box-shadow:
+
+        0 0 20px
+        rgba(255,55,145,0.8),
+
+        0 0 60px
+        rgba(255,55,145,0.4);
+
+}
+
+
+.love-button:active {
+
+    transform:
+        scale(0.95);
+
+}
+
+
+/* =====================================================
+   MEMORY PAGE
+===================================================== */
+
+#memoryPage {
+
+    display:
+        none;
+
+    min-height:
+        100vh;
+
+    padding:
+        50px 20px 100px;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #46132f,
+            #160812 55%,
+            #080408
+        );
+
+}
+
+
+/* =====================================================
+   MEMORY TITLE
+===================================================== */
+
+.memory-title {
+
+    position:
+        relative;
+
+    z-index:
+        10;
+
+    text-align:
+        center;
+
+    font-family:
+        'Dancing Script',
+        cursive;
+
+    font-size:
+        clamp(45px, 8vw, 75px);
+
+    text-shadow:
+
+        0 0 15px
+        #ff4f9a,
+
+        0 0 35px
+        rgba(255,50,130,0.6);
+
+    margin-bottom:
+        10px;
+
+}
+
+
+.memory-subtitle {
+
+    position:
+        relative;
+
+    z-index:
+        10;
+
+    text-align:
+        center;
+
+    color:
+        #f4bad2;
+
+    font-size:
+        14px;
+
+    margin-bottom:
+        40px;
+
+}
+
+
+/* =====================================================
+   POLAROID AREA
+===================================================== */
+
+.polaroid-area {
+
+    position:
+        relative;
+
+    width:
+        min(1200px, 100%);
+
+    height:
+        850px;
+
+    margin:
+        auto;
+
+}
+
+
+/* =====================================================
+   POLAROID
+===================================================== */
+
+.polaroid {
+
+    position:
+        absolute;
+
+    width:
+        230px;
+
+    padding:
+        12px 12px 52px;
+
+    background:
+        white;
+
+    box-shadow:
+        0 20px 40px
+        rgba(0,0,0,0.5);
+
+    opacity:
+        0;
+
+    cursor:
+        pointer;
+
+    transform:
+        translateY(80px)
+        scale(0.3)
+        rotate(var(--rotation));
+
+    animation:
+
+        showPolaroid
+
+        0.9s
+
+        cubic-bezier(.17,.89,.32,1.28)
+
+        forwards;
+
+    transition:
+
+        transform
+        0.35s ease,
+
+        box-shadow
+        0.35s ease;
+
+}
+
+
+.polaroid:hover {
+
+    transform:
+        translateY(-15px)
+        scale(1.12)
+        rotate(0deg);
+
+    box-shadow:
+
+        0 30px 70px
+        rgba(0,0,0,0.7);
+
+    z-index:
+        999 !important;
+
+}
+
+
+.polaroid img {
+
+    width:
+        100%;
+
+    height:
+        205px;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
+
+}
+
+
+.photo-caption {
+
+    position:
+        absolute;
+
+    bottom:
+        10px;
+
+    left:
+        0;
+
+    width:
+        100%;
+
+    text-align:
+        center;
+
+    color:
+        #333;
+
+    font-family:
+        'Dancing Script',
+        cursive;
+
+    font-size:
+        20px;
+
+}
+
+
+@keyframes showPolaroid {
+
+    0% {
+
+        opacity:
+            0;
+
+        transform:
+
+            translateY(100px)
+
+            scale(0.3)
+
+            rotate(0deg);
+
+    }
+
+
+    60% {
+
+        opacity:
+            1;
+
+        transform:
+
+            translateY(-10px)
+
+            scale(1.05)
+
+            rotate(var(--rotation));
+
+    }
+
+
+    100% {
+
+        opacity:
+            1;
+
+        transform:
+
+            translateY(0)
+
+            scale(1)
+
+            rotate(var(--rotation));
+
+    }
+
+}
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+.back-button {
+
+    display:
+        block;
+
+    margin:
+        20px auto 0;
+
+    padding:
+        13px 28px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.25);
+
+    border-radius:
+        30px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    color:
+        white;
+
+    cursor:
+        pointer;
+
+    font-family:
+        'Poppins',
+        sans-serif;
+
+    transition:
+        0.3s;
+
+}
+
+
+.back-button:hover {
+
+    background:
+        rgba(255,255,255,0.16);
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+/* =====================================================
+   SPARKLES
+===================================================== */
+
+.sparkle {
+
+    position:
+        fixed;
+
+    width:
+        5px;
+
+    height:
+        5px;
+
+    border-radius:
+        50%;
+
+    background:
+        white;
+
+    pointer-events:
+        none;
+
+    z-index:
+        9999;
+
+    animation:
+        sparkle
+        1s linear forwards;
+
+}
+
+
+@keyframes sparkle {
+
+    0% {
+
+        transform:
+            scale(0);
+
+        opacity:
+            1;
+
+    }
+
+
+    100% {
+
+        transform:
+            scale(2);
+
+        opacity:
+            0;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px) {
+
+    .card {
+
+        padding:
+            40px 22px;
+
+    }
+
+
+    .letter {
+
+        font-size:
+            14px;
+
+        line-height:
+            1.9;
+
+    }
+
+
+    .polaroid-area {
+
+        height:
+            auto;
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        align-items:
+            center;
+
+        gap:
+            30px;
+
+    }
+
+
+    .polaroid {
+
+        position:
+            relative !important;
+
+        left:
+            auto !important;
+
+        top:
+            auto !important;
+
+        width:
+            220px;
+
+        transform:
+            rotate(var(--rotation));
+
+    }
+
+
+    .polaroid:hover {
+
+        transform:
+            scale(1.08)
+            rotate(0deg);
+
+    }
+
+
+    .polaroid img {
+
+        height:
+            190px;
+
+    }
+
+
+    #musicButton {
+
+        width:
+            48px;
+
+        height:
+            48px;
+
+        right:
+            15px;
+
+        bottom:
+            15px;
+
+        font-size:
+            19px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     MUSIC
+===================================================== -->
+
+<audio
+    id="bgMusic"
+    loop>
+
+    <source
+        src="song.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+
+<!-- =====================================================
+     MUSIC BUTTON
+===================================================== -->
+
+<button
+    id="musicButton"
+    onclick="toggleMusic()">
+
+    🔇
+
+</button>
+
+
+
+<!-- =====================================================
+     FLOATING HEARTS
+===================================================== -->
+
+<div
+    class="hearts"
+    id="hearts">
+</div>
+
+
+
+<!-- =====================================================
+     MAIN PAGE
+===================================================== -->
+
+<section
+    class="main-page"
+    id="mainPage">
+
+
+    <div class="card">
+
+
+        <div class="small-title">
+
+            A Special Message For You
+
+        </div>
+
+
+
+        <h1>
+
+            Im Sorryy Syasya ❤️
+
+        </h1>
+
+
+
+        <div class="subtitle">
+
+            To the most beautiful person in my life...
+
+        </div>
+
+
+
+        <!-- TYPING MESSAGE -->
+
+        <div
+            class="letter"
+            id="letter">
+
+        </div>
+
+
+
+        <div
+            class="signature"
+            id="signature">
+
+            With all my love,<br>
+
+            Your Baby ❤️
+
+        </div>
+
+
+
+        <div
+            class="button-container"
+            id="buttonContainer">
+
+
+            <button
+                class="love-button"
+                onclick="openMemories()">
+
+                💗 Open this 💗
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     MEMORY PAGE
+===================================================== -->
+
+<section
+    id="memoryPage">
+
+
+    <h2
+        class="memory-title">
+
+        Our Little Memories ❤️
+
+    </h2>
+
+
+    <p
+        class="memory-subtitle">
+
+        Every picture holds a little piece
+        of our story.
+
+    </p>
+
+
+    <div
+        class="polaroid-area"
+        id="polaroidArea">
+
+    </div>
+
+
+    <button
+        class="back-button"
+        onclick="goBack()">
+
+        ← Back to my message
+
+    </button>
+
+
+</section>
+
+
+
+<script>
+
+
+/* =====================================================
+   YOUR PHOTOS
+===================================================== */
+
+/*
+
+   PUT YOUR PHOTOS INSIDE:
+
+   birthday/
+   │
+   ├── index.html
+   ├── song.mp3
+   │
+   └── images/
+       ├── photo1.jpg
+       ├── photo2.jpg
+       ├── photo3.jpg
+       ├── photo4.jpg
+       ├── photo5.jpg
+       ├── photo6.jpg
+       ├── photo7.jpg
+       ├── photo8.jpg
+       ├── photo9.jpg
+       └── photo10.jpg
+
+*/
+
+
+const photos = [
+
+    {
+        image:
+            "photo1.jpg",
+
+        caption:
+            "My favourite memory ❤️"
+    },
+
+
+    {
+        image:
+            "photo2.jpg",
+
+        caption:
+            "You make me smile"
+    },
+
+
+    {
+        image:
+            "photo3.jpg",
+
+        caption:
+            "Always you ❤️"
+    },
+
+
+    {
+        image:
+            "photo4.jpg",
+
+        caption:
+            "My Cacaa"
+    },
+
+
+    {
+        image:
+            "photo5.jpg",
+
+        caption:
+            "Cacaa cantikkk"
+    },
+
+
+    {
+        image:
+            "photo6.jpg",
+
+        caption:
+            "My favourite person ❤️"
+    },
+
+
+    {
+        image:
+            "photo7.jpg",
+
+        caption:
+            "My Sayangg comell"
+    },
+
+
+    {
+        image:
+            "photo8.jpg",
+
+        caption:
+            "Syasyaaa lawaaa"
+    },
+
+];
+
+
+
+/* =====================================================
+   TYPING MESSAGE
+===================================================== */
+
+const messages = [
+
+    `Im sorryyy to the girl who means <span class="highlight">so much to me. ❤️</span> i knoww orang dah buat banyakk salah kat sayangg i knoww babyyy dah buatt banyakk silapp sampaii sayangg marahh kat babyy, sampaii sayangg merajukk ngn babyy i knoww thattt and i knoww it's all my faultt walaupunn kita baru kenalll but i hopee u know thatt i love you veryy muchh and orang takankk orang lainn selainn diaa seriouss orangg cakapp ni seriouss i knoww thatt orangg tauu orangg dah buat silapp but i still pujukkk diaa istill kejarr diaa causee you are the one thatt i wantt takde orangg dahh exceptt youu sayanggg i knoww orangg bukan sape sapee but all i want o do is to givee youu lovee that u neverr feel beforeee causee i knoww u wantt thatt rightt babyy nakk mintakk maaaff sangat sangatt kat sayangg sbb tadiii babyyy bergurau dengan sayangg mcmm tuu baby takk berniatt pun mcmm tuu i lovee youu not becausee of lust, bbut i love youu becausee i fell comfortablee with you becausee  feell safe withh you thats whyyy i lovee youu veryy muchh cacaaa andd caraaa ni jee i boleh bagii kat u and i will do my bestt to keepp u happyyy everydayy sayanggg i hopeee you knoww thatt <span class="highlight">I LOVE YOU SO MUCH ❤️</span>`,
+
+    `Once again... <br><br><span class="highlight">Im sorryyy, my love. ❤️</span>`
+
+];
+
+
+let messageIndex = 0;
+
+let characterIndex = 0;
+
+let currentElement = null;
+
+
+/*
+   Typing speed.
+
+   35 = normal
+
+   20 = faster
+
+   50 = slower
+*/
+
+const typingSpeed = 35;
+
+
+
+/* =====================================================
+   TYPING FUNCTION
+===================================================== */
+
+function typeMessage() {
+
+
+    /* ---------------------------------------------
+       ALL MESSAGES FINISHED
+    --------------------------------------------- */
+
+    if (
+        messageIndex >=
+        messages.length
+    ) {
+
+
+        document
+            .getElementById(
+                "signature"
+            )
+            .classList.add(
+                "show"
+            );
+
+
+        setTimeout(
+            () => {
+
+                document
+                    .getElementById(
+                        "buttonContainer"
+                    )
+                    .classList.add(
+                        "show"
+                    );
+
+            },
+            600
+        );
+
+
+        return;
+
+    }
+
+
+
+    /* ---------------------------------------------
+       CREATE PARAGRAPH
+    --------------------------------------------- */
+
+    if (
+        currentElement === null
+    ) {
+
+
+        currentElement =
+            document.createElement(
+                "p"
+            );
+
+
+        currentElement.className =
+            "typing-line";
+
+
+        document
+            .getElementById(
+                "letter"
+            )
+            .appendChild(
+                currentElement
+            );
+
+
+        characterIndex = 0;
+
+    }
+
+
+
+    /* ---------------------------------------------
+       CURRENT MESSAGE
+    --------------------------------------------- */
+
+    const fullText =
+        messages[
+            messageIndex
+        ];
+
+
+
+    /* ---------------------------------------------
+       TYPE
+    --------------------------------------------- */
+
+    if (
+        characterIndex <
+        fullText.length
+    ) {
+
+
+        const temporary =
+            document.createElement(
+                "div"
+            );
+
+
+        temporary.innerHTML =
+            fullText.substring(
+                0,
+                characterIndex + 1
+            );
+
+
+        currentElement.innerHTML =
+            temporary.innerHTML;
+
+
+        currentElement.innerHTML +=
+            '<span class="cursor"></span>';
+
+
+        characterIndex++;
+
+
+        setTimeout(
+            typeMessage,
+            typingSpeed
+        );
+
+
+    }
+
+
+    /* ---------------------------------------------
+       MESSAGE FINISHED
+    --------------------------------------------- */
+
+    else {
+
+
+        currentElement.innerHTML =
+            fullText;
+
+
+        messageIndex++;
+
+
+        currentElement = null;
+
+
+        setTimeout(
+            typeMessage,
+            500
+        );
+
+    }
+
+}
+
+
+
+/* =====================================================
+   START TYPING
+===================================================== */
+
+window.addEventListener(
+    "load",
+    function() {
+
+        setTimeout(
+            typeMessage,
+            1200
+        );
+
+    }
+);
+
+
+
+/* =====================================================
+   MUSIC
+===================================================== */
+
+const music =
+    document.getElementById(
+        "bgMusic"
+    );
+
+
+const musicButton =
+    document.getElementById(
+        "musicButton"
+    );
+
+
+
+/* =====================================================
+   START MUSIC
+===================================================== */
+
+function startMusic() {
+
+
+    music.play()
+
+        .then(
+            function() {
+
+                musicButton.innerHTML =
+                    "🎵";
+
+            }
+        )
+
+        .catch(
+            function(error) {
+
+                console.log(
+                    "Music waiting for user interaction."
+                );
+
+            }
+        );
+
+}
+
+
+
+/* =====================================================
+   TOGGLE MUSIC
+===================================================== */
+
+function toggleMusic() {
+
+
+    if (
+        music.paused
+    ) {
+
+
+        music.play();
+
+
+        musicButton.innerHTML =
+            "🎵";
+
+
+    }
+
+
+    else {
+
+
+        music.pause();
+
+
+        musicButton.innerHTML =
+            "🔇";
+
+    }
+
+}
+
+
+
+/* =====================================================
+   START MUSIC WHEN USER CLICKS
+===================================================== */
+
+document.addEventListener(
+    "click",
+    function startMusicOnce() {
+
+
+        if (
+            music.paused
+        ) {
+
+            startMusic();
+
+        }
+
+
+        document.removeEventListener(
+            "click",
+            startMusicOnce
+        );
+
+    }
+);
+
+
+
+/* =====================================================
+   POLAROID POSITIONS
+===================================================== */
+
+const positions = [
+
+    {
+        left: "4%",
+        top: "5%"
+    },
+
+
+    {
+        left: "37%",
+        top: "2%"
+    },
+
+
+    {
+        left: "70%",
+        top: "7%"
+    },
+
+
+    {
+        left: "18%",
+        top: "32%"
+    },
+
+
+    {
+        left: "50%",
+        top: "29%"
+    },
+
+
+    {
+        left: "77%",
+        top: "35%"
+    },
+
+
+    {
+        left: "3%",
+        top: "61%"
+    },
+
+
+    {
+        left: "34%",
+        top: "62%"
+    },
+
+
+    {
+        left: "64%",
+        top: "65%"
+    },
+
+
+    {
+        left: "78%",
+        top: "78%"
+    }
+
+];
+
+
+
+/* =====================================================
+   CREATE POLAROIDS
+===================================================== */
+
+function createPolaroids() {
+
+
+    const area =
+        document.getElementById(
+            "polaroidArea"
+        );
+
+
+    area.innerHTML =
+        "";
+
+
+    const mobile =
+        window.innerWidth <= 600;
+
+
+
+    photos.forEach(
+        (photo, index) => {
+
+
+            const polaroid =
+                document.createElement(
+                    "div"
+                );
+
+
+            polaroid.className =
+                "polaroid";
+
+
+
+            /* RANDOM ROTATION */
+
+            const rotation =
+                Math.random() * 12 - 6;
+
+
+            polaroid.style.setProperty(
+                "--rotation",
+                rotation + "deg"
+            );
+
+
+
+            /* DESKTOP POSITION */
+
+            if (
+                !mobile
+            ) {
+
+
+                const position =
+                    positions[
+                        index %
+                        positions.length
+                    ];
+
+
+                polaroid.style.left =
+                    position.left;
+
+
+                polaroid.style.top =
+                    position.top;
+
+            }
+
+
+
+            /* ANIMATION DELAY */
+
+            polaroid.style.animationDelay =
+                (
+                    index * 0.15
+                ) + "s";
+
+
+
+            /* Z-INDEX */
+
+            polaroid.style.zIndex =
+                index + 1;
+
+
+
+            /* POLAROID CONTENT */
+
+            polaroid.innerHTML = `
+
+                <img
+                    src="${photo.image}"
+                    alt="Memory ${index + 1}"
+                >
+
+                <div
+                    class="photo-caption">
+
+                    ${photo.caption}
+
+                </div>
+
+            `;
+
+
+
+            /* CLICK PHOTO */
+
+            polaroid.addEventListener(
+                "click",
+                function() {
+
+
+                    document
+                        .querySelectorAll(
+                            ".polaroid"
+                        )
+                        .forEach(
+                            item => {
+
+                                item.style.zIndex =
+                                    1;
+
+                            }
+                        );
+
+
+                    this.style.zIndex =
+                        999;
+
+                }
+            );
+
+
+
+            area.appendChild(
+                polaroid
+            );
+
+        }
+    );
+
+}
+
+
+
+/* =====================================================
+   OPEN MEMORIES
+===================================================== */
+
+function openMemories() {
+
+
+    /* Make sure music is playing */
+
+    if (
+        music.paused
+    ) {
+
+        startMusic();
+
+    }
+
+
+    document.getElementById(
+        "mainPage"
+    ).style.display =
+        "none";
+
+
+    document.getElementById(
+        "memoryPage"
+    ).style.display =
+        "block";
+
+
+    createPolaroids();
+
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior:
+            "smooth"
+
+    });
+
+}
+
+
+
+/* =====================================================
+   BACK BUTTON
+===================================================== */
+
+function goBack() {
+
+
+    document.getElementById(
+        "memoryPage"
+    ).style.display =
+        "none";
+
+
+    document.getElementById(
+        "mainPage"
+    ).style.display =
+        "flex";
+
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior:
+            "smooth"
+
+    });
+
+}
+
+
+
+/* =====================================================
+   FLOATING HEARTS
+===================================================== */
+
+const heartContainer =
+    document.getElementById(
+        "hearts"
+    );
+
+
+const heartCharacters = [
+
+    "❤️",
+
+    "💗",
+
+    "💖",
+
+    "💕",
+
+    "💓",
+
+    "💞"
+
+];
+
+
+
+function createHeart() {
+
+
+    const heart =
+        document.createElement(
+            "div"
+        );
+
+
+    heart.className =
+        "heart";
+
+
+    heart.innerHTML =
+        heartCharacters[
+            Math.floor(
+                Math.random() *
+                heartCharacters.length
+            )
+        ];
+
+
+    heart.style.left =
+        Math.random() * 100 + "%";
+
+
+    heart.style.fontSize =
+        (
+            12 +
+            Math.random() * 20
+        ) + "px";
+
+
+    heart.style.animationDuration =
+        (
+            5 +
+            Math.random() * 7
+        ) + "s";
+
+
+    heartContainer.appendChild(
+        heart
+    );
+
+
+    setTimeout(
+        () => {
+
+            heart.remove();
+
+        },
+        13000
+    );
+
+}
+
+
+setInterval(
+    createHeart,
+    500
+);
+
+
+
+/* =====================================================
+   MOUSE SPARKLES
+===================================================== */
+
+document.addEventListener(
+    "mousemove",
+    function(event) {
+
+
+        if (
+            Math.random() > 0.8
+        ) {
+
+
+            const sparkle =
+                document.createElement(
+                    "div"
+                );
+
+
+            sparkle.className =
+                "sparkle";
+
+
+            sparkle.style.left =
+                event.clientX + "px";
+
+
+            sparkle.style.top =
+                event.clientY + "px";
+
+
+            document.body.appendChild(
+                sparkle
+            );
+
+
+            setTimeout(
+                () => {
+
+                    sparkle.remove();
+
+                },
+                1000
+            );
+
+        }
+
+    }
+);
+
+
+
+/* =====================================================
+   RESIZE
+===================================================== */
+
+window.addEventListener(
+    "resize",
+    function() {
+
+
+        const memoryPage =
+            document.getElementById(
+                "memoryPage"
+            );
+
+
+        if (
+            memoryPage.style.display ===
+            "block"
+        ) {
+
+            createPolaroids();
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
